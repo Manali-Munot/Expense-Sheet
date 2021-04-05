@@ -1,4 +1,4 @@
-import { ListTemplate } from './classes/ListTemplate.js';
+
 var formSelector = document.querySelector(".new-item-form");
 var AvailAmount = 0;
 var type = document.querySelector("#type");
@@ -13,6 +13,4 @@ if (type.value === 'income') {
     AvailAmount = AvailAmount + parseInt(amount.value);
 }
 console.log(AvailAmount);
-var ul = document.querySelector('.income-list');
-var list = new ListTemplate(ul);
-list.render(details.value, amount.value);
+

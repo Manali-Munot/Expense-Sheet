@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeScript Tutorial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Initial Amount : 0</h1>
+    <h1>Available Amount : <span id="avail-amount"></span></h1>
+    
+  </div>
+
+  <footer>
+    <form class="new-item-form">
+      <div class="field">
+        <label>Type:</label>
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expenditure">Expenditure</option>
+        </select>
+      </div>   
+      <div class="field">
+        <label>Details:</label>
+        <input type="text" id="details">
+      </div>
+      <div class="field">
+        <label>Amount (£):</label>
+        <input type="number" id="amount">
+      </div>
+      <button>Add</button>
+    </form>
+
+    
+  </footer>
+  <!-- output list -->
+
+ 
+  <ul class="income-list">
+    <h3><span style="border : solid 1px green; background-color: #95f5a4">Income List</span></h3>
+  </ul>
+
+
+  <ul class="expenditure-list col-md-6">
+    <h3><span style="border : solid 1px red; background-color: #faafb9">Expenditure List</span></h3>
+  </ul>
+
+  <script type="module" src='app.js'></script>
+</body>
+</html>

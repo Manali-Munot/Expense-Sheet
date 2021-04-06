@@ -1,8 +1,15 @@
 import { ListTemplate } from './classes/ListTemplate.js';
 
+let initial_amt= prompt("enter initial amount");
+let initial_amt1=Number(initial_amt);
+let initamt:HTMLHeadingElement = document.getElementById("initial-amount") as HTMLHeadingElement;            
+initamt.innerText = "Initial Amount : " + initial_amt;
+let AvailAmount:number=initial_amt1;
+let greeter:HTMLHeadingElement = document.getElementById("avail-amount") as HTMLHeadingElement;
+            greeter.innerText = "Available Amount : " + AvailAmount;
 
 const formSelector=document.querySelector(".new-item-form") as HTMLFormElement;
-let AvailAmount:number=0;
+
 const type=document.querySelector("#type") as HTMLSelectElement;
 const details=document.querySelector("#details") as HTMLInputElement;
 const amount=(document.querySelector("#amount") as HTMLInputElement);

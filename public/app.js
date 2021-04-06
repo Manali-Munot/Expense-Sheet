@@ -1,6 +1,12 @@
 import { ListTemplate } from './classes/ListTemplate.js';
+var initial_amt = prompt("enter initial amount");
+var initial_amt1 = Number(initial_amt);
+var initamt = document.getElementById("initial-amount");
+initamt.innerText = "Initial Amount : " + initial_amt;
+var AvailAmount = initial_amt1;
+var greeter = document.getElementById("avail-amount");
+greeter.innerText = "Available Amount : " + AvailAmount;
 var formSelector = document.querySelector(".new-item-form");
-var AvailAmount = 0;
 var type = document.querySelector("#type");
 var details = document.querySelector("#details");
 var amount = document.querySelector("#amount");
@@ -14,8 +20,8 @@ formSelector.addEventListener('submit', function (e) {
             var ul = document.querySelector('.income-list');
             var list = new ListTemplate(ul);
             list.render(details.value, amount.value);
-            var greeter = document.getElementById("avail-amount");
-            greeter.innerText = "Available Amount : " + AvailAmount;
+            var greeter_1 = document.getElementById("avail-amount");
+            greeter_1.innerText = "Available Amount : " + AvailAmount;
         }
     }
     else {
@@ -24,8 +30,8 @@ formSelector.addEventListener('submit', function (e) {
             var ul = document.querySelector('.expenditure-list');
             var list = new ListTemplate(ul);
             list.render(details.value, amount.value);
-            var greeter = document.getElementById("avail-amount");
-            greeter.innerText = "Available Amount : " + AvailAmount;
+            var greeter_2 = document.getElementById("avail-amount");
+            greeter_2.innerText = "Available Amount : " + AvailAmount;
         }
     }
     console.log(AvailAmount);
